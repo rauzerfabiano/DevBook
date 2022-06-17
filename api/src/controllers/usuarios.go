@@ -24,5 +24,5 @@ func AtualizarUsuario(w http.ResponseWriter, r *http.Request) {
 
 //DeletarUsuario exclui as informações um usuario do banco de dados
 func DeletarUsuario(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Criar usuario"))
+	w.Write([]byte("Deletando usuario"))
 }
