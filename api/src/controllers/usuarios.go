@@ -11,7 +11,7 @@ import (
 	"net/http"
 )
 
-// CriarUsuario inserir um usuario no banco de dados
+// CriarUsuario insere um usuario no banco de dados
 func CriarUsuario(w http.ResponseWriter, r *http.Request) {
 	corpoRequest, erro := ioutil.ReadAll(r.Body)
 	if erro != nil {

@@ -14,7 +14,7 @@ type Rota struct {
 	RequerAutenticacao bool
 }
 
-// Configurar coloca todas as rotas dentro do router
+// Recebe o router vazio, configura todas as rotas e retorna o router pronto
 func Configurar(r *mux.Router) *mux.Router {
 	rotas := rotasUsuarios
 

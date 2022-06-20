@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// rotasUsuarios é um slice do struct Rota
 var rotasUsuarios = []Rota{
 	{
 		URI:                "/usuarios",
