@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	config.Carregar()
+	config.CarregarVariaveisDeAmbiente()
 
 	r := router.Gerar()
 

@@ -17,8 +17,8 @@ var (
 	Porta = 0
 )
 
-// Carregar vai inicializar as variáveis de ambiente
-func Carregar() {
+// CarregarVariaveisDeAmbiente vai inicializar as variáveis de ambiente
+func CarregarVariaveisDeAmbiente() {
 	var erro error
 
 	if erro = godotenv.Load(); erro != nil {
