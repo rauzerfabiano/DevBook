@@ -29,7 +29,7 @@ func ValidarToken(r *http.Request) error {
 		return erro
 	}
 
-	if _, ok := token.Claims.(jwt.Claims); ok && token.Valid {
+	if _, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
 		return nil
 	}
 
@@ -48,7 +48,7 @@ func extrairToken(r *http.Request) string {
 
 func retornarChaveDeVerificacao(token *jwt.Token) (interface{}, error) {
 	if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
-		return nil, fmt.Errorf("Método de assinatura inesperado! %v", token.Header["alg"])
+		return nil, fmt.Errorf("Método de assinatura inesperado %v", token.Header["alg"])
 	}
 
 	return config.SecretKey, nil
