@@ -144,3 +144,17 @@ func (repositorio Usuarios) SeguirUsuario(usuarioID, seguidorID uint64) error {
 
 	return nil
 }
+
+// PararDeSeguirUsuario permite que um usuário pare de seguir o outro
+func (repositorio Usuarios) PararDeSeguirUsuario(usuarioID, seguidorID uint64) error {
+	statement, erro := repositorio.db.Prepare("DELETE FROM seguidores WHERE usuario_id = ? AND seguidor_id = ?")
+	if erro != nil {
+		return erro
+	}
+
+	if _, erro = statement.Exec(usuarioID, seguidorID); erro != nil {
+		return erro
+	}
+
+	return nil
+}
