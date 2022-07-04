@@ -10,4 +10,10 @@ VALUES
 (3, 1),
 (1, 3);
 
+INSERT INTO publicacoes(titulo, conteudo, autor_id)
+VALUES
+("Publicação do usuário 1", "Essa é a publicação do usuário 1! Oba!", 1),
+("Publicação do usuário 2", "Essa é a publicação do usuário 2! Oba!", 2),
+("Publicação do usuário 3", "Essa é a publicação do usuário 3! Oba!", 3);
+
 
