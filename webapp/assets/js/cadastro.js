@@ -2,8 +2,7 @@ $('#formulario-cadastro').on('submit', criarUsuario);
 
 function criarUsuario(evento) {
     evento.preventDefault();
-    console.log("Dentro da função usuario");
-
+    
     if ($('#senha').val() != $('#confirmar-senha').val()) {
         alert("As senhas não coincidem");
         return;
