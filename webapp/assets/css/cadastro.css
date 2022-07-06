@@ -88,28 +88,6 @@ input::placeholder {
     background-color: #204085;
 }
 
-.devbook-new-account:hover {
-    cursor: pointer;
-}
-
-.btn-new-account {
-    font-size: 16px;
-    color: #fff;
-    line-height: 1.2;
-    padding: 0 20px;
-    width: 100%;
-    height: 62px;
-    border-radius: 6px;
-    background-color: #42b72a;
-    outline: none;
-    border: none;
-}
-
-.btn-new-account:hover {
-    cursor: pointer;
-    background-color: #00a400;
-}
-
 .devbook-text-new-account {
     color: #204085;
     text-decoration: none;
