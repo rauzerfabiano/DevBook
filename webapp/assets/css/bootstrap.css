@@ -2637,6 +2637,13 @@ textarea.form-control-lg {
   -moz-appearance: none;
   appearance: none;
 }
+
+.fa-heart:hover {
+  color: #f00;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .form-range::-moz-range-thumb {
     -moz-transition: none;
