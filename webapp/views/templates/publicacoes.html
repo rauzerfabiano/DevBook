@@ -1,13 +1,18 @@
 {{ define "curtidas" }}
-    <span> {{ .Curtidas }} curtidas </span>
+    <i class="fas fa-heart"></i>
+    <span> {{ .Curtidas }} </span>
 {{ end}}
 
 {{ define "editar" }}
-    <a href="/editar">Editar publicação</a>
+    <a href="/editar" style="text-decoration: none;">
+        <i class="fas fa-edit"></i>
+    </a>
 {{ end }}
 
 {{ define "deletar" }}
-    <a href="/deletar">Deletar publicação</a>
+    <a href="/deletar" style="text-decoration: none;">
+        <i class="fas fa-trash text-danger"></i>
+    </a>
 {{ end }}
 
 {{ define "cabecalho-publicacao" }}
