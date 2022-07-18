@@ -58,8 +58,8 @@ func CarregarPaginaPrincipal(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
-// CarregarPaginaDeEdicaoDePublicacao carrega página de edição de publicação
-func CarregarPaginaDeEdicaoDePublicacao(w http.ResponseWriter, r *http.Request) {
+// CarregarPaginaDeAtualizacaoDePublicacao carrega página de edição de publicação
+func CarregarPaginaDeAtualizacaoDePublicacao(w http.ResponseWriter, r *http.Request) {
 	parametros := mux.Vars(r)
 	publicacaoID, erro := strconv.ParseUint(parametros["publicacaoId"], 10, 64)
 	if erro != nil {
