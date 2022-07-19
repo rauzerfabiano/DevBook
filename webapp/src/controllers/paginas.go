@@ -16,12 +16,12 @@ import (
 )
 
 // CarregarTelaDeLogin renderiza a tela de login
-func CarregarTelaDeLogin(w http.ResponseWriter, r *http.Request) {
+func CarregarTelaDeLogin(w http.ResponseWriter, _ *http.Request) {
 	utils.ExecutarTemplate(w, "login.html", nil)
 }
 
 // CarregarPaginaDeCadastroDeUsuario carrega a tela de cadastro de usuário
-func CarregarPaginaDeCadastroDeUsuario(w http.ResponseWriter, r *http.Request) {
+func CarregarPaginaDeCadastroDeUsuario(w http.ResponseWriter, _ *http.Request) {
 	utils.ExecutarTemplate(w, "cadastro.html", nil)
 }
 
