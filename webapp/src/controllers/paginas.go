@@ -19,7 +19,7 @@ import (
 func CarregarTelaDeLogin(w http.ResponseWriter, r *http.Request) {
 	cookie, _ := cookies.Ler(r)
 	if cookie["token"] != "" {
-		http.Redirect(w, r, "/", http.StatusFound)
+		http.Redirect(w, r, "/home", http.StatusFound)
 		return
 	}
 
