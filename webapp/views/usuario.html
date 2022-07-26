@@ -13,7 +13,7 @@
 
     {{ $SeguidoPeloUsuarioLogado := false }}
     {{ range .Usuario.Seguidores }}
-    {{ if eq .ID $.UsuarioLogadoID }}
+    {{ if (eq .ID $.UsuarioLogadoID) }}
     {{ $SeguidoPeloUsuarioLogado := true }}
     {{ end }}
     {{ end }}
