@@ -45,28 +45,28 @@ func BuscarUsuarioCompleto(usuarioID uint64, r *http.Request) (Usuario, error) {
 		select {
 		case usuarioCarregado := <-canalUsuario:
 			if usuarioCarregado.ID == 0 {
-				return Usuario{}, errors.New("Erro ao buscar o usuário")
+				return Usuario{}, errors.New("erro ao buscar o usuário")
 			}
 
 			usuario = usuarioCarregado
 
 		case seguidoresCarregados := <-canalSeguidores:
 			if seguidoresCarregados == nil {
-				return Usuario{}, errors.New("Erro ao buscar os seguidores")
+				return Usuario{}, errors.New("erro ao buscar os seguidores")
 			}
 
 			seguidores = seguidoresCarregados
 
 		case seguindoCarregados := <-canalSeguindo:
 			if seguindoCarregados == nil {
-				return Usuario{}, errors.New("Erro ao buscar quem o usuário está seguindo")
+				return Usuario{}, errors.New("erro ao buscar quem o usuário está seguindo")
 			}
 
 			seguindo = seguindoCarregados
 
 		case publicacoesCarregadas := <-canalPublicacoes:
 			if publicacoesCarregadas == nil {
-				return Usuario{}, errors.New("Erro ao buscar as publicações")
+				return Usuario{}, errors.New("erro ao buscar as publicações")
 			}
 
 			publicacoes = publicacoesCarregadas
