@@ -30,14 +30,14 @@
                         </h6>
 
                         <p class="card-text">
-                            <a href="#">
+                            <a href="#" data-toggle="modal" data-target="#modal-seguidores">
                                 Seguidores: {{ len .Usuario.Seguidores }}
                             </a>
                         </p>
 
-                        <p class="card-text">
+                        <p class="card-text" data-toggle="modal" data-target="#modal-seguindo">
                             <a href="#">
-                                Seguidores: {{ len .Usuario.Seguindo }}
+                                Seguindo: {{ len .Usuario.Seguindo }}
                             </a>
                         </p>
 
@@ -79,6 +79,9 @@
             </div>
         </div>
     </div>
+
+    {{ template "modal-seguidores" .Usuario }}
+    {{ template "modal-seguindo" .Usuario }}
 
     {{ template "rodape" }}
     {{ template "scripts" }}
