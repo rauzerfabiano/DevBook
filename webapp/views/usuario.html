@@ -14,7 +14,7 @@
     {{ $SeguidoPeloUsuarioLogado := false }}
     {{ range .Usuario.Seguidores }}
     {{ if (eq .ID $.UsuarioLogadoID) }}
-    {{ $SeguidoPeloUsuarioLogado := true }}
+    {{ $SeguidoPeloUsuarioLogado = true }}
     {{ end }}
     {{ end }}
 
@@ -43,12 +43,12 @@
 
                         <a href="#" class="card-link">
                             {{ if $SeguidoPeloUsuarioLogado }}
-                            <button id="parar-de-seguir" class="btn btn-info" data-usuario-id=" {{ .Usuario.ID }}">
+                            <button id="parar-de-seguir" class="btn btn-info" data-usuario-id="{{ .Usuario.ID }}">
                                 Parar de Seguir
                             </button>
 
                             {{ else }}
-                            <button id="seguir" class="btn btn-info" data-usuario-id=" {{ .Usuario.ID }}">
+                            <button id="seguir" class="btn btn-info" data-usuario-id="{{ .Usuario.ID }}">
                                 Seguir
                             </button>
 
