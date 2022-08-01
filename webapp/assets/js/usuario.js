@@ -2,7 +2,7 @@ $('#parar-de-seguir').on('click', pararDeSeguir);
 $('#seguir').on('click', seguir);
 $('#editar-usuario').on('submit', editar);
 $('#atualizar-senha').on('submit', atualizarSenha);
-$('#deletar-usuario').on('submit', deletarUsuario);
+$('#deletar-usuario').on('click', deletarUsuario);
 
 
 function pararDeSeguir() {
